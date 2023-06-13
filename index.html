@@ -6,25 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lrbll's portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./main.js"></script>
+
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Song+Myung&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Song+Myung&display=swap");
       body {
-        font-family: "Song Myung", serif;
+        font-family: "Black Han Sans", sans-serif;
       }
       .gradient {
-        background: linear-gradient(90deg, #e7d578 0%, #efda9f 100%);
-      }
-    </style>
-    <style type="text/tailwindcss">
-      @layer utilities {
-        a[aria-current="page"] {
-          @apply text-cyan-700;
-        }
+        background: linear-gradient(90deg, #0e7490 0%, #f9a8d4 100%);
       }
     </style>
   </head>
 
-  <body class="leading-normal tracking-normal overflow-x-hidden">
+  <body class="leading-normal tracking-normal overflow-x-hidden w-full h-full">
     <!-- 헤더 영역 -->
     <header class="z-10 fixed w-full shadow-md">
       <nav class="gradient border-gray-200 py-2.5">
@@ -34,52 +29,127 @@
           <a href="./index.html" class="flex items-center">
             <span
               class="self-center text-xl font-semibold font-semibold whitespace-nowrap text-black my-2"
-              >Welcome to Lrbll's portfolio</span
+              >Lrbll's portfolio</span
             >
           </a>
+          <div
+            class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1"
+          >
+            <ul
+              class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
+            >
+              <li>
+                <button
+                  onclick="scrollToSection('profile_section')"
+                  class="py-2 pl-4 pr-4 text-sm text-black hover:text-gray-700 hover:transition-all hover:duration-300"
+                >
+                  Profle
+                </button>
+              </li>
+
+              <li>
+                <button
+                  onclick="scrollToSection('about_section')"
+                  class="py-2 pl-4 pr-4 text-sm text-black hover:text-gray-700 hover:transition-all hover:duration-300"
+                >
+                  About
+                </button>
+              </li>
+              <li>
+                <button
+                  onclick="scrollToSection('skills_section')"
+                  class="py-2 pl-4 pr-4 text-sm text-black hover:text-gray-700 hover:transition-all hover:duration-300"
+                >
+                  Skills
+                </button>
+              </li>
+              <li>
+                <button
+                  onclick="scrollToSection('projects_section')"
+                  class="py-2 pl-4 pr-4 text-sm text-black hover:text-gray-700 hover:transition-all hover:duration-300"
+                >
+                  projects
+                </button>
+              </li>
+              <li>
+                <button
+                  onclick="scrollToSection('contact_section')"
+                  class="py-2 pl-4 pr-4 text-sm text-black hover:text-gray-700 hover:transition-all hover:duration-300"
+                >
+                  Contact
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
 
-    <!-- profile section -->
-    <section class="bg-white border-b py-8">
+    <!-- Profile section -->
+    <section
+      class="border-b py-8 bg-zinc-600 min-h-screen"
+      id="profile_section"
+    >
       <div class="container max-w-5xl mx-auto m-8 w-3/5">
         <div
-          class="mx-auto w-52 gradient text-gray-800 font-bold rounded-full mt-24 mb-2 py-4 px-8 shadow-lg"
+          class="mx-auto w-52 gradient text-center text-black font-bold rounded-full mt-24 mb-2 py-4 px-8 shadow-lg"
         >
-          profile
+          Profile
         </div>
         <div class="flex flex-wrap">
-          <div class="w-full p-6 mt-6 mx-auto sm:1/2">
-            <div class="align-middle">
-              <img
-                src="./img/profile.jpg"
-                class="w-[200px] object-cover mx-auto"
-              />
+          <div class="w-full p-6">
+            <div class="mx-auto text-center">
+              <h3 class="text-3xl text-black font-bold leading-none mb-3">
+                Lrbll's portfolio
+              </h3>
+              <p class="text-white mb-8 text-lg">
+                안녕하세요 풀스텍 웹 개발자가 되고싶은 이다연입니다.
+              </p>
+              <p class="text-white mb-8 text-lg">
+                저는 엉뚱하지만 창의적이고, 느리지만 꼼꼼합니다.
+              </p>
+              <p class="text-white mb-8 text-lg">이러한 특장점을 살려,</p>
+              <p class="text-white mb-8 text-lg">
+                사용자에게 다채로운 경험을 선사하고<br />
+                유용한 기능을 제공하는 웹서비스를 만들고 싶습니다.
+              </p>
             </div>
           </div>
-          <div class="w-full p-6 mt-6 mx-auto">
+        </div>
+      </div>
+    </section>
+
+    <!-- About section -->
+    <section class="border-b py-8 min-h-screen" id="about_section">
+      <div class="container max-w-5xl mx-auto m-8 w-3/5">
+        <div
+          class="mx-auto w-52 gradient text-center text-black font-bold rounded-full mt-24 mb-2 py-4 px-8 shadow-lg"
+        >
+          About
+        </div>
+        <div class="flex flex-wrap">
+          <div class="w-full sm:w-1/2 p-6 mt-6">
             <div class="align-middle">
-              <p>
-                "안녕하세요, 저는 풀스텍 개발자가 되고 싶은 이다연입니다. <br />
-                저는 엉뚱하지만 창의적이고, 느리지만 꼼꼼한 사람입니다. 이러한
-                모습을 통해,<br />
-                사용자가 다채로운 경험을 할 수 있고 유용하게 쓸 수 있는
-                웹서비스를 제공하고 싶습니다."
+              <img src="./img/profile.png" class="w-64 h-72 mx-auto" />
+            </div>
+          </div>
+          <div class="w-full sm:w-1/2 p-6 mt-6">
+            <div class="align-middle">
+              <p class="text-black mb-8">
+                이름<br />
+                이다연
               </p>
-              <h2>학력</h2>
-              <hr />
-              <p>
-                <b>2019.02</b> 풍동고등학교 졸업 <br />
-                <b>2019.03</b> 중부대학교 소프트웨어공학부 입학 <br />
-                <b>2021.03</b> 중부대학교 정보보호학과 재학
+              <p class="text-black mb-8">
+                생년월일<br />
+                00.03.25
               </p>
-              <h2>신상</h2>
-              <hr />
-              <p>
-                <b>이름 :</b> 이다연 <br />
-                <b>나이 :</b> 2000.03.25 <br />
-                <b>직업 :</b> 학생, 현재 정보보호학과 4학년 재학
+              <p class="text-black mb-8">
+                연락처<br />
+                010-8109-2930
+              </p>
+              <p class="text-black mb-8">
+                이메일<br />
+                ekdus207@naver.com
               </p>
             </div>
           </div>
@@ -88,62 +158,63 @@
     </section>
 
     <!-- skills section -->
-    <section class="bg-white border-b py-8">
+    <section
+      class="section border-b py-8 bg-zinc-200 min-h-screen"
+      id="skills_section"
+    >
       <div class="container max-w-5xl mx-auto m-8 w-3/5">
         <div
-          class="mx-auto w-52 gradient text-gray-800 font-bold rounded-full mt-24 mb-2 py-4 px-8 shadow-lg"
+          class="mx-auto w-52 gradient text-center text-black font-bold rounded-full mt-24 mb-2 py-4 px-8 shadow-lg"
         >
-          profile
+          skills
         </div>
         <div
-          class="w-4/5 mx-auto flex md:flex-row flex-col bg-white rounded-full shadow-xl mb-20"
+          class="w-full h-[100px] mx-auto mt-16 mb-10 flex md:flex-row bg-white rounded-full shadow-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
         >
           <div
-            class="w-full sm:1/4 p-6 flex-1 flex justify-center items-center"
+            class="w-full sm:1/3 p-6 flex-1 flex justify-center items-center"
           >
             <div class="align-middle">
-              <!-- <a href="https://www.instagram.com/you.ra/"
-                ><button
-                  class="object-cover w-20 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:brightness-75 duration-300"
-                >
-                  <img src="img/instagram_icon.png" /></button
-              ></a> -->
+              <img src="img/html.png" class="w-20" />
             </div>
           </div>
           <div
-            class="w-full sm:1/4 p-6 flex-1 flex justify-center items-center"
+            class="w-full sm:1/3 p-6 flex-1 flex justify-center items-center"
           >
             <div class="align-middle">
-              <!-- <a href="https://www.youtube.com/channel/UCrgmcWsu4pBRmEQz1l5cklQ"
-                ><button
-                  class="object-cover w-20 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:brightness-75 duration-300"
-                >
-                  <img src="img/youtube_icon.png" /></button
-              ></a> -->
+              <img src="img/css.png" class="w-20" />
             </div>
           </div>
           <div
-            class="w-full sm:1/4 p-6 flex-1 flex justify-center items-center"
+            class="w-full sm:1/3 p-6 flex-1 flex justify-center items-center"
           >
             <div class="align-middle">
-              <!-- <a href="https://www.facebook.com/official.youra"
-                ><button
-                  class="object-cover w-20 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:brightness-75 duration-300"
-                >
-                  <img src="img/facebook_icon.png" /></button
-              ></a> -->
+              <img src="img/js.png" class="w-20" />
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full h-[100px] mx-auto mt-16 mb-10 flex md:flex-row bg-white rounded-full shadow-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+        >
+          <div
+            class="w-full sm:1/3 p-6 flex-1 flex justify-center items-center"
+          >
+            <div class="align-middle">
+              <img src="img/node.png" class="w-20" />
             </div>
           </div>
           <div
-            class="w-full sm:1/4 p-6 flex-1 flex justify-center items-center"
+            class="w-full sm:1/3 p-6 flex-1 flex justify-center items-center"
           >
             <div class="align-middle">
-              <!-- <a href="https://www.munhwain.kr/team4-1"
-                ><button
-                  class="object-cover w-20 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:brightness-75 duration-300"
-                >
-                  <img src="img/entertainer_icon.png" /></button
-              ></a> -->
+              <img src="img/python.png" class="w-20" />
+            </div>
+          </div>
+          <div
+            class="w-full sm:1/3 p-6 flex-1 flex justify-center items-center"
+          >
+            <div class="align-middle">
+              <img src="img/js.png" class="w-20" />
             </div>
           </div>
         </div>
@@ -151,114 +222,144 @@
     </section>
 
     <!-- projects section -->
-    <section class="bg-white border-b py-8">
-      <div class="container max-w-5xl mx-auto m-8 w-3/5">
+    <section class="section border-b py-8 bg-zinc-700" id="projects_section">
+      <div class="container max-w-5xl mx-auto m-8 w-3/4">
         <div
-          class="mx-auto w-52 gradient text-gray-800 font-bold rounded-full mt-24 mb-2 py-4 px-8 shadow-lg"
+          class="mx-auto w-52 gradient text-center text-black font-bold rounded-full mt-24 mb-2 py-4 px-8 shadow-lg"
         >
-          skills
+          projects
         </div>
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-          <div
-            class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
-          >
-            <!-- <iframe
-              width="380"
-              height="215"
-              src="https://www.youtube.com/embed/hgIyw1P670A"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-            <p
-              class="w-full text-gray-600 px-6 text-center text-lg font-semibold pt-5 pb-5"
+        <div class="flex flex-wrap">
+          <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+            <div
+              class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
             >
-              MV - Jungle Bike
-            </p> -->
+              <img src="./img/pro_portfolio.png" alt="" />
+              <p
+                class="w-full text-gray-600 px-6 text-center text-lg font-semibold pt-5 pb-5"
+              >
+                포트폴리오<br />
+                <a
+                  href="https://lrblls-portfolio.netlify.app/"
+                  class="hover:text-black"
+                  >Lrbll's portfolio</a
+                >
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-          <div
-            class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
-          >
-            <!-- <iframe
-              width="380"
-              height="215"
-              src="https://www.youtube.com/embed/f9rHF8tH8jg"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-            <p
-              class="w-full text-gray-600 px-6 text-center text-lg font-semibold pt-5 pb-5"
+          <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+            <div
+              class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
             >
-              MV - 어떤 우울이 우리를 흔들겠어요
-            </p> -->
+              <img src="./img/pro_youra.png" alt="" />
+              <p
+                class="w-full text-gray-600 px-6 text-center text-lg font-semibold pt-5 pb-5"
+              >
+                가수 유라 팬페이지<br />
+                <a
+                  href="https://github.com/Lrbll/youra_fanclub "
+                  class="hover:text-black"
+                  >youra fanclub</a
+                >
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-          <div
-            class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
-          >
-            <!-- <iframe
-              width="380"
-              height="215"
-              src="https://www.youtube.com/embed/MoTlvOrJbRc"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-            <p
-              class="w-full text-gray-600 px-6 text-center text-lg font-semibold pt-5 pb-5"
+          <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+            <div
+              class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
             >
-              MV - Rawww
-            </p> -->
+              <img src="./img/pro_hook.png" alt="" />
+              <p
+                class="w-full text-gray-600 px-6 text-center text-lg font-semibold pt-5 pb-5"
+              >
+                웹취약점진단사이트<br />
+                <a
+                  href="https://github.com/Lrbll/Capstone"
+                  class="hover:text-black"
+                  >Hook</a
+                >
+              </p>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- contact section -->
-    <section class="bg-zinc-50 border-b py-8">
-      <div class="container max-w-5xl mx-auto m-8">
-        <div class="flex w-full">
-          <div class="flex flex-col flex-wrap mx-auto">
-            <div class="flex-1 w-full">
-              <div class="flex flex-col h-full">
-                <div class="text-black mb-5">
-                  <div
-                    class="mx-auto w-52 gradient text-gray-800 font-bold rounded-full mt-24 mb-2 py-4 px-8 shadow-lg"
-                  >
-                    Contact
-                  </div>
-                </div>
-                <div class="text-black mx-auto">
-                  <p>Phone: 010-8109-2930</p>
-                  <p>Email: ekdus207@naver.com</p>
-                  <p>
-                    Github:
-                    <a
-                      href="https://github.com/Lrbll"
-                      class="hover:text-gray-600"
-                      >Go to Github</a
-                    >
-                  </p>
-                </div>
-              </div>
+          <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+            <div
+              class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
+            >
+              <img src="./img/pro_webdemo.png" alt="" />
+              <p
+                class="w-full text-gray-600 px-6 text-center text-lg font-semibold pt-5 pb-5"
+              >
+                demo<br />
+                <a
+                  href="https://dotswebdemo.netlify.app/"
+                  class="hover:text-black"
+                  >web demo</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+            <div
+              class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
+            >
+              <img src="./img/pro_boot.png" alt="" />
+              <p
+                class="w-full text-gray-600 px-6 text-center text-lg font-semibold pt-5 pb-5"
+              >
+                bootstrap<br />
+                <a
+                  href="https://lrblls-bootstrapblog.netlify.app/"
+                  class="hover:text-black"
+                  >bootstrap Blog</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+            <div
+              class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
+            >
+              <img src="./img/pro_tail.png" alt="" />
+              <p
+                class="w-full text-gray-600 px-6 text-center text-lg font-semibold pt-5 pb-5"
+              >
+                tailwind<br />
+                <a
+                  href="https://lrblls-tailwindblog.netlify.app/"
+                  class="hover:text-black"
+                  >tailwind Blog</a
+                >
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!--Footer-->
-    <footer class="gradient">
-      <div class="container mx-auto px-10">
-        <div class="w-full flex flex-col md:flex-row py-6 ml-28"></div>
+    <!-- contact section -->
+    <section class="section border-b py-8 min-h-screen" id="contact_section">
+      <div class="container max-w-5xl mx-auto m-8">
+        <div
+          class="mx-auto w-52 gradient text-center text-black font-bold rounded-full mt-24 mb-2 py-4 px-8 shadow-lg"
+        >
+          Contact Me
+        </div>
+        <div class="text-center text-black mt-10">
+          <p class="mt-10">Phone<br />010-8109-2930</p>
+          <p class="mt-10">Email<br />ekdus207@naver.com</p>
+          <p class="mt-10">
+            <a href="https://github.com/Lrbll" class="hover:text-gray-600"
+              >Go to Github</a
+            >
+          </p>
+        </div>
       </div>
+    </section>
+    <!--Footer-->
+    <footer class="w-full gradient font-sm h-20">
+      <p class="text-center pt-8">
+        Copyright &copy; 2023, 중부대학교 정보보호학과 4학년 이다연
+      </p>
     </footer>
   </body>
 </html>
